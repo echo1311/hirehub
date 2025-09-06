@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HireHub - Find Workers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/jobs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <a href="index.html"  class="logo">HireHub</a>
+    <input type="text" id="navLocation" class="location-box" readonly placeholder="Select Location">
+    
+    <ul class="nav-links" id="navLinks">
+        <a href="cart.html" class="nav-cart">🛒</a>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Sign Up</a></li>
+    </ul>
+
+    <div id="userProfile" class="user-dropdown" style="display: none;">
+        <div class="user-circle" id="userCircle">N</div>
+        <span id="userName">User</span>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="profile.html">Profile</a>
+            <a href="cart.html">Cart</a>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Popup -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+        <h3>Select Location</h3>
+        <button onclick="useCurrentLocation()">📍 Use Current Location</button>
+        <hr>
+        <input type="text" id="manualAddress" placeholder="Enter location">
+        <button onclick="useManualLocation()">Submit</button>
+        <br><br>
+        <button onclick="closePopup()">Cancel</button>
+    </div>
+</div>
+
+<!-- Hero Slider -->
+<!-- Swiper CSS -->
+<section class="collection">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Worker Card -->
+      <div class="worker-card swiper-slide">
+        <div class="card-top">
+          <img src="images/plumber-john.jpg" alt="John">
+        </div>
+        <div class="card-content">
+          <h2>John</h2>
+          <h3>Plumber</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star-half-alt"></i> 4.5
+          </div>
+          <div class="socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <button class="read-btn">Read More</button>
+        </div>
+      </div>
+
+      <!-- Repeat for Sarah -->
+      <div class="worker-card swiper-slide">
+        <div class="card-top">
+          <img src="images/cleaner-sarah.jpg" alt="Sarah">
+        </div>
+        <div class="card-content">
+          <h2>Sarah</h2>
+          <h3>Cleaner</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star-half-alt"></i> 4.5
+          </div>
+          <div class="socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <button class="read-btn">Read More</button>
+        </div>
+      </div>
+
+
+      <div class="worker-card swiper-slide">
+        <div class="card-top">
+          <img src="images/cleaner-sarah.jpg" alt="Sarah">
+        </div>
+        <div class="card-content">
+          <h2>Sarah</h2>
+          <h3>Cleaner</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star-half-alt"></i> 4.5
+          </div>
+          <div class="socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <button class="read-btn">Read More</button>
+        </div>
+      </div>
+      
+      <div class="worker-card swiper-slide">
+        <div class="card-top">
+          <img src="images/plumber-john.jpg" alt="John">
+        </div>
+        <div class="card-content">
+          <h2>John</h2>
+          <h3>Plumber</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star-half-alt"></i> 4.5
+          </div>
+          <div class="socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <button class="read-btn">Read More</button>
+        </div>
+      </div>
+
+      <div class="worker-card swiper-slide">
+        <div class="card-top">
+          <img src="images/plumber-john.jpg" alt="John">
+        </div>
+        <div class="card-content">
+          <h2>John</h2>
+          <h3>Plumber</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star"></i> 
+            <i class="fas fa-star-half-alt"></i> 4.5
+          </div>
+          <div class="socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <button class="read-btn">Read More</button>
+        </div>
+      </div>
+
+      
+        
+      </div>
+      <!-- Do the same for Mike, Anna, Chris... -->
+      <div class="swiper-pagination"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+    
+  </div>
+</section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script src="scripts/jobs.js"></script>
+</body>
+</html>

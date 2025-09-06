@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HireHub - Find Jobs Easily</title>
+  <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">HireHub</div>
+        <input type="text" id="navLocation" class="location-box" readonly placeholder="Select Location">
+    <ul class="nav-links" id="navLinks">
+      <a href="jobs.html" >Services</a>
+      <a href="cart.html" class="nav-cart">
+  🛒 
+    </a>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Sign Up</a></li>
+    </ul>
+      
+   
+    
+    <div id="userProfile" class="user-dropdown" style="display: none;">
+      <div class="user-circle" id="userCircle">N</div>
+      <span id="userName">User</span>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="profile.html">Profile</a>
+        <a href="cart.html">Cart</a>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+   
+  </nav>
+   <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <h3>Select Location</h3>
+            <button onclick="useCurrentLocation()">📍 Use Current Location</button>
+            <hr>
+            <input type="text" id="manualAddress" placeholder="Enter location">
+            <button onclick="useManualLocation()">Submit</button>
+            <br><br>
+            <button onclick="closePopup()">Cancel</button>
+        </div>
+    </div>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Skills that start careers</h1>
+      <p>HireHub connects skilled workers with real opportunities —start your journey now!</p>
+      <a href="register.html" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-text">
+      <h2>About HireHub</h2>
+      <p>HireHub bridges the gap between skill and opportunity.
+        We're on a mission to empower blue-collar workers — from maids to electricians — by helping them find jobs, build their reputation, and grow their income.
+        For job posters, we make it fast, safe, and easy to hire verified, skilled professionals — all in one place.</p>
+    </div>
+    <div class="about-img">
+      <img src="images/group.jpg" alt="People working together" />
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Post a Job</h3>
+        <p>Create job listings and hire instantly.</p>
+      </div>
+      <div class="card">
+        <h3>Hire Skilled Workers</h3>
+        <p>Browse profiles and find the best fit.</p>
+      </div>
+      <div class="card">
+        <h3>Track Requests</h3>
+        <p>Manage your bookings and history easily.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>HireHub</h3>
+        <p>Empowering blue-collar workers through technology.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@hirehub.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 HireHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/index.js"></script>
+</body>
+</html>
